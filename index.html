@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduBridge Connect</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="phone-shell">
+      <section id="loginScreen" class="screen active">
+        <div class="app-brand">
+          <div class="logo">📘</div>
+          <h1>EduBridge Connect</h1>
+          <p class="subtitle">Learning Collaboration Portal</p>
+        </div>
+
+        <form id="loginForm" class="card" autocomplete="off">
+          <h2>Sign in</h2>
+          <label>
+            Username
+            <input id="username" type="text" placeholder="Enter username" required />
+          </label>
+          <label>
+            Password
+            <input id="password" type="password" placeholder="Enter password" required />
+          </label>
+          <button type="submit" class="primary-btn">Continue</button>
+          <p id="loginError" class="error" aria-live="polite"></p>
+          <p class="hint">Demo users: muskan / shariff</p>
+        </form>
+      </section>
+
+      <section id="chatScreen" class="screen">
+        <header class="topbar">
+          <div>
+            <h2>Study Exchange</h2>
+            <p id="roleInfo" class="role"></p>
+          </div>
+          <button id="logoutBtn" class="ghost-btn">Logout</button>
+        </header>
+
+        <div class="chat-card">
+          <div id="chatList" class="chat-list" aria-live="polite"></div>
+
+          <div id="adminControls" class="admin-controls hidden">
+            <button id="clearBtn" class="danger-btn">Clear all chats</button>
+            <button id="exportBtn" class="ghost-btn">Export chat</button>
+          </div>
+
+          <form id="msgForm" class="composer">
+            <input id="messageInput" type="text" maxlength="500" placeholder="Write your learning update..." required />
+            <button type="submit" class="primary-btn">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
